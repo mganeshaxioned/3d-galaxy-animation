@@ -1,0 +1,59 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+
+.dg.main .close-button.close-bottom {
+    display: none;
+}
+
+.dots{
+    font-family: 'Space Mono', monospace;
+    z-index: 3;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.dots span {
+    display: block;
+}
+
+
+.dots-1 {
+    top: 22%;
+    left: 44%; 
+}
+
+.dots-2 {
+    top: 37%;
+    left: 70%;
+}
+
+.dots-3 {
+    top: 62%;
+    left: 68%;
+}
+
+.dots-4 {
+    bottom: 20%;
+    left: 44%;
+}
+
+.dots-5 {
+    top: 62%;
+    left: 23%;
+}
+
+
+.dots-6 {
+    top: 37%;
+    left: 20%;
+}
