@@ -21,6 +21,12 @@ body
     position: absolute;
     color: white;
     text-align: center;
+    font-size: 25px;
+}
+
+.dots a {
+    color: white;
+    text-decoration: none;
 }
 .dots span {
     display: block;

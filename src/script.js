@@ -27,17 +27,17 @@ const scene = new THREE.Scene()
 
 const parameters = {}
 
-parameters.count = 70000
+parameters.count = 40000
 parameters.size = 0.01
 parameters.radius = 5
 parameters.branches = 8
 parameters.spin = 1
 parameters.randomness = 0.3
-parameters.randomnessPower = 5
-parameters.stars = 66500
-parameters.starColor = '#1b3984'
-parameters.insideColor = '#ff6030'
-parameters.outsideColor = '#1b3984'
+parameters.randomnessPower = 4
+parameters.stars = 100000
+parameters.starColor = '#37182a'
+parameters.insideColor = '#c581d9'
+parameters.outsideColor = '#bbaeed'
 
 gui.add(parameters, 'count').min(100).max(100000).step(100).onChange(generateGalaxy).name('stars in galaxy')
 gui.add(parameters, 'stars').min(0).max(100000).step(100).onChange(generateBgStars).name('background stars')
@@ -199,18 +199,13 @@ camera.position.y = 2
 camera.position.z = 1
 scene.add(camera)
 
-let mouseX = 0;
-let mouseY = 0;
+
 document.addEventListener("mousemove", (e) => {
     camera.position.z = e.clientX / 1500;
-//   mouseY = e.clientY;
+    // camera.position.y = e.clientY / 200;
 
 // camera.position.z = ( e.clientX / window.innerWidth ) / 10000 - 1;   
 // camera.position.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
-
-//   console.log(e.clientX);
-//   console.log(e.clientY);
-
 
 });
 
