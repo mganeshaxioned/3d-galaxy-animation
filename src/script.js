@@ -36,7 +36,7 @@ parameters.randomness = 0.3
 parameters.randomnessPower = 4
 parameters.stars = 100000
 parameters.starColor = '#37182a'
-parameters.insideColor = '#c581d9'
+parameters.insideColor = '#15286B'
 parameters.outsideColor = '#bbaeed'
 
 gui.add(parameters, 'count').min(100).max(100000).step(100).onChange(generateGalaxy).name('stars in galaxy')
