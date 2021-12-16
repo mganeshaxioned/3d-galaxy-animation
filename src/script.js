@@ -118,21 +118,26 @@ function generateGalaxy(){
 
     const colorInside = new THREE.Color(parameters.insideColor)
     const colorOutside = new THREE.Color(parameters.outsideColor)
-
+    console.log('parameters', parameters)
     for(let i=0; i<parameters.count; i++){
 
         //Position
         const x = Math.random() * parameters.radius
-        const branchAngle = (i % parameters.branches) / parameters.branches * 2 * Math.PI
+        // const branchAngle = (i % parameters.branches) / parameters.branches * 2 * Math.PI
+        const branchAngle = Math.sqrt(i) + i
+        // console.log(branchAngle)
         const spinAngle = x * parameters.spin
 
         const randomX = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random()<0.5 ? 1: -1) 
         const randomY = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random()<0.5 ? 1: -1) 
         const randomZ = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random()<0.5 ? 1: -1)
-
-        positions[i*3] = Math.sin(branchAngle + spinAngle) * x + randomX
-        positions[i*3 + 1] = randomY
-        positions[i*3 + 2] = Math.cos(branchAngle + spinAngle) * x + randomZ
+        // console.log(randomX, randomY, randomZ)
+        // positions[i * 3] = Math.random()
+        // positions[i * 3 + 1] = Math.random();
+        // positions[i * 3 + 2] = Math.random();
+        positions[i * 3] = Math.sin(branchAngle + spinAngle) * x ;
+        positions[i * 3 + 1] = randomY;
+        positions[i * 3 + 2] = Math.cos(branchAngle + spinAngle) * x ;
 
         //Color
 
@@ -201,7 +206,7 @@ scene.add(camera)
 
 
 document.addEventListener("mousemove", (e) => {
-    camera.position.z = e.clientX / 1500;
+    // camera.position.z = e.clientX / 1500;
     // camera.position.y = e.clientY / 200;
 
 // camera.position.z = ( e.clientX / window.innerWidth ) / 10000 - 1;   

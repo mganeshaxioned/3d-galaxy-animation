@@ -132,9 +132,23 @@ a {
     font-family: 'Space Mono', monospace;
     z-index: 3;
     position: absolute;
+    /* position: relative; */
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.dots:hover{
+  /* width: 300px;
+  height: 300px;
+  border-radius:50%;
+  background-color: pink;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.2 ease-in-out;
+  transition-delay: 300ms;
+  box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #dca8f3, 0 0 140px 90px #b65ca7; */
+
 }
 
 .dots a {
